@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lesson 5 Demo - HTML Forms</title>
+  </head>
+  <body>
+    <h1>Lesson 5 Demo: HTML Forms</h1>
+    <p>
+      A form collects information from the user. Everything inside a
+      <code>&lt;form&gt;</code> tag is part of that form. Let's look at each
+      piece one at a time.
+    </p>
+
+    <hr />
+
+    <!-- ===================== -->
+    <!-- SECTION 1: Text inputs -->
+    <!-- ===================== -->
+    <h2>1. Text Inputs &amp; Labels</h2>
+    <p>
+      A <code>&lt;label&gt;</code> describes what an input is for. The label's
+      <code>for</code> attribute must match the input's <code>id</code>. Try
+      clicking the label text — notice it moves your cursor into the box!
+    </p>
+
+    <label for="username">Your Name:</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="e.g. Ada Lovelace"
+    />
+
+    <br /><br />
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" />
+
+    <br /><br />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="hidden as you type"
+    />
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 2: Other input types -->
+    <!-- ======================== -->
+    <h2>2. More Input Types</h2>
+    <p>The <code>type</code> attribute changes what kind of input you get:</p>
+
+    <label for="age">Age (number):</label>
+    <input type="number" id="age" name="age" min="1" max="120" />
+
+    <br /><br />
+
+    <label for="birthday">Birthday (date):</label>
+    <input type="date" id="birthday" name="birthday" />
+
+    <br /><br />
+
+    <label for="phone">Phone (tel):</label>
+    <input type="tel" id="phone" name="phone" placeholder="555-1234" />
+
+    <br /><br />
+
+    <label for="website">Website (url):</label>
+    <input
+      type="url"
+      id="website"
+      name="website"
+      placeholder="https://example.com"
+    />
+
+    <br /><br />
+
+    <label for="favouritecolor">Favourite Color:</label>
+    <input type="color" id="favouritecolor" name="favouritecolor" />
+
+    <br /><br />
+
+    <label for="volume">Volume (range slider):</label>
+    <input type="range" id="volume" name="volume" min="0" max="100" />
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 3: Radio buttons -->
+    <!-- ======================== -->
+    <h2>3. Radio Buttons (Pick One)</h2>
+    <p>
+      Radio buttons let the user choose <strong>one option</strong> from a
+      group. All radio buttons in the same group must share the
+      <strong>same <code>name</code></strong
+      >.
+    </p>
+
+    <p>What grade are you in?</p>
+
+    <input type="radio" name="grade" id="g10" value="10" />
+    <label for="g10">Grade 10</label>
+
+    <br />
+
+    <input type="radio" name="grade" id="g11" value="11" />
+    <label for="g11">Grade 11</label>
+
+    <br />
+
+    <input type="radio" name="grade" id="g12" value="12" />
+    <label for="g12">Grade 12</label>
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 4: Checkboxes -->
+    <!-- ======================== -->
+    <h2>4. Checkboxes (Pick Many)</h2>
+    <p>
+      Checkboxes let the user choose
+      <strong>as many options as they want</strong>. Each checkbox has its own
+      <code>name</code>.
+    </p>
+
+    <p>Which subjects do you like? (check all that apply)</p>
+
+    <input type="checkbox" id="cs" name="subject_cs" value="cs" />
+    <label for="cs">Computer Science</label>
+
+    <br />
+
+    <input type="checkbox" id="math" name="subject_math" value="math" />
+    <label for="math">Math</label>
+
+    <br />
+
+    <input type="checkbox" id="art" name="subject_art" value="art" />
+    <label for="art">Art</label>
+
+    <br />
+
+    <input
+      type="checkbox"
+      id="science"
+      name="subject_science"
+      value="science"
+    />
+    <label for="science">Science</label>
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 5: Dropdown -->
+    <!-- ======================== -->
+    <h2>5. Dropdown Menu (select)</h2>
+    <p>
+      A <code>&lt;select&gt;</code> creates a dropdown menu. Each choice is an
+      <code>&lt;option&gt;</code> inside it.
+    </p>
+
+    <label for="homeroom">Pick your homeroom teacher:</label>
+    <select id="homeroom" name="homeroom">
+      <option value="">-- Choose one --</option>
+      <option value="ms_chen">Ms. Chen</option>
+      <option value="mr_ali">Mr. Ali</option>
+      <option value="mrs_okafor">Mrs. Okafor</option>
+      <option value="mr_smith">Mr. Smith</option>
+    </select>
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 6: Textarea -->
+    <!-- ======================== -->
+    <h2>6. Textarea (Multi-line Text)</h2>
+    <p>
+      A <code>&lt;textarea&gt;</code> lets users type a longer message. Use
+      <code>rows</code> to set how tall it is.
+    </p>
+
+    <label for="msg">Tell us about yourself:</label>
+    <br />
+    <textarea
+      id="msg"
+      name="msg"
+      rows="5"
+      cols="40"
+      placeholder="Write a few sentences here..."
+    ></textarea>
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 7: required, disabled, readonly -->
+    <!-- ======================== -->
+    <h2>7. Useful Attributes</h2>
+    <p>These attributes control how inputs behave:</p>
+
+    <p>
+      <strong>required</strong> — must be filled before the form can be
+      submitted. Try clicking Submit without filling this in:
+    </p>
+    <label for="req_field">Required field:</label>
+    <input
+      type="text"
+      id="req_field"
+      name="req_field"
+      required
+      placeholder="You must fill this in"
+    />
+
+    <br /><br />
+
+    <p>
+      <strong>disabled</strong> — the field is greyed out and cannot be used:
+    </p>
+    <label for="dis_field">Disabled field:</label>
+    <input
+      type="text"
+      id="dis_field"
+      name="dis_field"
+      disabled
+      value="can't touch this"
+    />
+
+    <br /><br />
+
+    <p><strong>readonly</strong> — you can see the value but not change it:</p>
+    <label for="ro_field">Read-only field:</label>
+    <input
+      type="text"
+      id="ro_field"
+      name="ro_field"
+      readonly
+      value="you can copy me but not edit me"
+    />
+
+    <hr />
+
+    <!-- ======================== -->
+    <!-- SECTION 8: Full form -->
+    <!-- ======================== -->
+    <h2>8. A Complete Form</h2>
+    <p>
+      Here is everything put together inside one <code>&lt;form&gt;</code> tag.
+      The <code>action</code> tells the browser where to send the data, and
+      <code>method="post"</code> is the standard way to send form data. Click
+      Submit to see the form validate your required fields!
+    </p>
+
+    <form action="/submit" method="post">
+      <label for="f_name">Full Name:</label>
+      <input
+        type="text"
+        id="f_name"
+        name="full_name"
+        required
+        placeholder="Your full name"
+      />
+
+      <br /><br />
+
+      <label for="f_email">Email:</label>
+      <input
+        type="email"
+        id="f_email"
+        name="email"
+        required
+        placeholder="you@example.com"
+      />
+
+      <br /><br />
+
+      <p>Grade:</p>
+      <input type="radio" name="grade" id="f_g10" value="10" />
+      <label for="f_g10">Grade 10</label>
+      <br />
+      <input type="radio" name="grade" id="f_g11" value="11" />
+      <label for="f_g11">Grade 11</label>
+      <br />
+      <input type="radio" name="grade" id="f_g12" value="12" />
+      <label for="f_g12">Grade 12</label>
+
+      <br /><br />
+
+      <label for="f_subject">Favourite Subject:</label>
+      <select id="f_subject" name="subject">
+        <option value="">-- Choose one --</option>
+        <option value="cs">Computer Science</option>
+        <option value="math">Math</option>
+        <option value="art">Art</option>
+      </select>
+
+      <br /><br />
+
+      <label for="f_msg">Message:</label>
+      <br />
+      <textarea id="f_msg" name="message" rows="4" cols="40"></textarea>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="reset">Clear Form</button>
+    </form>
+
+    <hr />
+    <p><em>End of Lesson 5 Demo</em></p>
+  </body>
+</html>

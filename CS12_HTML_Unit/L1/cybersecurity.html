@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cybersecurity and HTML: 5 Historical Cases</title>
+  </head>
+  <body>
+    <h1>Cybersecurity and HTML: 5 Historical Cases</h1>
+
+    <h1>1. The Samy Worm (2005)</h1>
+    <p>
+      A MySpace user named Samy Kamkar exploited a cross-site scripting (XSS)
+      vulnerability by injecting JavaScript into his HTML profile. Within 20
+      hours, over one million people had unknowingly executed his code and added
+      him as a friend. It remains one of the fastest-spreading pieces of
+      malicious code in history and is a perfect introduction to how HTML can be
+      weaponized through user-generated content.
+    </p>
+
+    <h1>2. The British Airways Data Breach (2018)</h1>
+    <p>
+      Attackers injected 22 lines of malicious JavaScript into British Airways'
+      payment page HTML, silently harvesting credit card details from roughly
+      500,000 customers. This attack — called "formjacking" or a Magecart attack
+      — shows how a tiny, invisible change to an HTML page can have massive
+      real-world consequences, and led to a £20 million fine under GDPR.
+    </p>
+
+    <h1>3. Tabnapping (Coined 2010)</h1>
+    <p>
+      Security researcher Aza Raskin identified and named this attack in 2010.
+      It exploits user inattention to open browser tabs — when a user leaves a
+      page open and navigates away, a malicious script quietly replaces the idle
+      tab with a fake login page for a trusted site like Gmail or a bank. What
+      makes it especially teachable is that the attack can work even without
+      JavaScript, using the HTML meta refresh tag to redirect inactive tabs
+      after a set time interval.
+    </p>
+
+    <h1>4. The Heartbleed Bug (2014) and HTTPS</h1>
+    <p>
+      While Heartbleed was technically an OpenSSL vulnerability rather than an
+      HTML flaw, it devastated the secure layer that HTTPS relies on to protect
+      web pages. It is a great hook for teaching students how the "S" in HTTPS
+      relates to the HTML they write — and why the padlock icon in a browser
+      matters. It affected an estimated 17% of all secure websites at the time.
+    </p>
+
+    <h1>
+      5. Homograph Attacks and the "apple.com" Proof of Concept (2001–2017)
+    </h1>
+    <p>
+      The concept was first formally documented in December 2001, when
+      researchers Evgeniy Gabrilovich and Alex Gontmakher from Technion, Israel
+      published a paper titled "The Homograph Attack," describing how Unicode
+      URLs could be used to spoof website addresses. To prove its feasibility,
+      they successfully registered a variant of microsoft.com that incorporated
+      Cyrillic characters.
+    </p>
+    <p>
+      The most widely cited real-world demonstration came in 2017, when security
+      researcher Xudong Zheng registered a domain that visually appeared to be
+      apple.com but was made entirely of Cyrillic and other Unicode characters.
+      Had Zheng been a malicious actor, he could have phished visitors'
+      credentials when they attempted to log in.
+    </p>
+    <p>
+      What makes this especially relevant for HTML students is that the fake
+      site had a valid HTTPS certificate, meaning the padlock icon still
+      appeared in the browser. The attack reveals that HTML pages can be cloned
+      nearly perfectly, and the danger lives entirely in the URL — something
+      browsers now try to combat by displaying the underlying Punycode
+      representation instead of the Unicode disguise.
+    </p>
+  </body>
+</html>
