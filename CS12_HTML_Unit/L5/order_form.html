@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order Form</title>
+  </head>
+  <body>
+    <!-- Comment -->
+    <h1>Pauls Computer Products (PCP)</h1>
+    <h2>Order Form</h2>
+    <form action="/submit" method="post">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </p>
+
+      <p>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+      </p>
+      <p>
+        <label for="product">Product Choice:</label>
+        <select name="product" id="product">
+          <option value="mouse">Wireless Mouse</option>
+          <option value="keyboard">Gaming Keyboard</option>
+          <option value="monitor">Widescree Monitor</option>
+        </select>
+      </p>
+      <h3>Shipping Location</h3>
+      <ul>
+        <li>
+          <label for="home">Home</label
+          ><input type="radio" name="ship_loc" id="home" value="home" />
+        </li>
+        <li>
+          <label for="store">To Store</label
+          ><input type="radio" name="ship_loc" id="store" value="store" />
+        </li>
+      </ul>
+
+      <h3>Add ons (Optional)</h3>
+      <ul>
+        <li>
+          <input
+            type="checkbox"
+            name="wrapping"
+            id="wrapping"
+            value="wrap"
+          /><label for="wrapping">Gift Wrapped</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            name="warranty"
+            id="warranty"
+            value="warranty"
+          /><label for="warranty">Extended Warranty</label>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
